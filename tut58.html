@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Settimeout and Cleartimeout</title>
+</head>
+<body>
+    <div class="container">
+       Time now is <span id="time"></span>
+    </div>
+</body>
+<script>
+    console.log("this is tutorial 58");
+    // setTimeout --> allows us to run the function once after an interval of time
+    // setInterval --> allows us to run the function repeatedly after an interval of time
+    function greet(name,byText){
+        console.log("Good Morning "+name+" "+byText);
+    }
+    const Timeout = setTimeout(greet, 5000,"Akshat","Take Care");
+    clearTimeout(Timeout);// setTimeout will not proceed after this
+    // setTimeout(greet(), 5000,"Akshat","Take Care");  Cannot use paranthesis, as the function will get executed before Timeout in that case
+    console.log(Timeout);
+    const intervalId=setInterval(greet, 2000, "Akshat","Take Care");
+    clearInterval(intervalId);
+
+    function displayTime(){
+        time = new Date();
+        document.getElementById('time').innerHTML = time;
+    }
+    setInterval(displayTime,  1000);
+</script>
+</html>

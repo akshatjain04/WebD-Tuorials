@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS events</title>
+</head>
+<style>
+    #btn{
+        padding:10px 14px;
+        background-color: red;
+        border: 2px solid black;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    </style>
+<body>
+    <!-- No need to remember -->
+    <!-- Browser Events:
+    Click
+    ContextMenu: Right click on mouse
+    mouseover/mouseout: Mouse coming out of an element
+    mousedown/mouseup: Press or release mouse button
+    mousemove
+
+    submit 
+    focus
+    
+    DOMContentLoaded -->
+    <div class="container">
+        <h1>This is my heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga culpa sequi quaerat inventore maxime eligendi, assumenda expedita quam quod recusandae neque officia. Illum natus et qui, voluptas nisi odio commodi?</p>
+    </div>
+    <button id="btn" onclick=toggleHide()>Show/Hide</button>
+    <script>
+        function toggleHide(){
+          let para=document.getElementById("para")
+           let btn = document.getElementById("btn");
+          // Even if we comment out the above 2 lines, it will still work, as it will automatically point to id "para" and "button"
+          if(para.style.display!=="none"){
+          para.style.display="none";
+          }else{
+            para.style.display="block";
+          }
+
+    //     Using Event Listener:
+        // para.addEventListener('mouseover', function run(){
+        //     alert('Mouse Inside')
+        // });
+
+        // para.addEventListener('mouseout', function run(){
+        //     alert('Mouse now went outside')
+        // });
+        }
+    </script>
+</body>
+</html>

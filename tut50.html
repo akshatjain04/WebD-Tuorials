@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript string functions</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+        let str="this is a string";
+        console.log(str);
+
+        // first occurence of a substring
+        let position = str.indexOf("is");
+        console.log(position);
+
+        // last occurence of a substring
+        position=str.lastIndexOf("is");
+        console.log(position);
+
+        // substring from a string
+        //let substr=str.slice(1,6);  // can take negative values  //prints substr from index start to end-1
+        // let substr=str.substring(1,6);   // cannot take negative values   //prints substr from index start to end-1
+         let substr=str.substr(1,5);   //prints substr from index start to start+length-1(second parameter)
+        console.log(substr);
+
+         let replaced = str.replace("string","akshat");
+         console.log(replaced);
+         console.log(str);
+
+         console.log(str.toUpperCase());
+         console.log(str.toLowerCase());
+
+        let newString=str.concat(str," new string");
+        console.log("newstring:",newString);
+
+        let strwithwhitespaces = "      this contains      whitespaces"
+        console.log(strwithwhitespaces);
+        console.log(strwithwhitespaces.trim());
+
+        //let char2=str.charAt(2);
+        let char2=str.charCodeAt(2); // gives utf-16 character code of that char
+        console.log(char2);
+        console.log(str[2]);
+    </script>
+</body>
+</html>
